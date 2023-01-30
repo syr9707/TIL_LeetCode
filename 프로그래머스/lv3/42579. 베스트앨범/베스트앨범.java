@@ -11,8 +11,8 @@ class Solution {
         }
         
         ArrayList<String> genre = new ArrayList<>(map.keySet());
-        // genre.sort((o1, o2) -> o2.compareTo(o1));
-        Collections.sort(genre,(o1,o2)->map.get(o2)-map.get(o1));
+        genre.sort((o1, o2) -> map.get(o2).compareTo(map.get(o1)));
+        // Collections.sort(genre,(o1,o2)->map.get(o2)-map.get(o1));
         
         ArrayList<Integer> list = new ArrayList<>();
         for(int i = 0; i < genre.size(); i++) {
